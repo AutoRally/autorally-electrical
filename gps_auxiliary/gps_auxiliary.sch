@@ -355,6 +355,14 @@
 <text x="0" y="1.016" size="1" layer="25" font="vector" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.016" size="1" layer="27" font="vector" align="top-center">&gt;VALUE</text>
 </package>
+<package name="CAP-PTH-5MM" urn="urn:adsk.eagle:footprint:37410/1" locally_modified="yes">
+<description>2 PTH spaced 5mm apart</description>
+<wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.2032" layer="21"/>
+<pad name="1" x="-2.5" y="0" drill="0.7" diameter="1.651"/>
+<pad name="2" x="2.5" y="0" drill="0.7" diameter="1.651"/>
+<text x="0" y="1.27" size="0.6096" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.524" size="0.6096" layer="27" font="vector" ratio="10" align="top-center">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="2X6" urn="urn:adsk.eagle:package:38277/1" type="box">
@@ -500,6 +508,16 @@ CONN_06x2
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 </symbol>
+<symbol name="CAP">
+<wire x1="0" y1="2.54" x2="0" y2="2.032" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="0.508" width="0.1524" layer="94"/>
+<text x="1.524" y="2.921" size="1.778" layer="95" font="vector">&gt;NAME</text>
+<text x="1.524" y="-2.159" size="1.778" layer="96" font="vector">&gt;VALUE</text>
+<rectangle x1="-2.032" y1="0.508" x2="2.032" y2="1.016" layer="94"/>
+<rectangle x1="-2.032" y1="1.524" x2="2.032" y2="2.032" layer="94"/>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="2" x="0" y="-2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="ED700/3" prefix="J">
@@ -638,6 +656,22 @@ CONN_06x2
 <technology name="">
 <attribute name="DKPN" value="10KQBK-ND "/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CAP-5MM" prefix="C">
+<gates>
+<gate name="G$1" symbol="CAP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CAP-PTH-5MM">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -797,6 +831,8 @@ CONN_06x2
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_A_L" device=""/>
+<part name="C1" library="gps_auxiliary" deviceset="CAP-5MM" device="" value="10uF 50V"/>
+<part name="C2" library="gps_auxiliary" deviceset="CAP-5MM" device="" value="10uF 50V"/>
 </parts>
 <sheets>
 <sheet>
@@ -885,6 +921,14 @@ UNUSED</text>
 <attribute name="SHEET" x="259.08" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="190.5" y="19.05" size="2.54" layer="94"/>
 </instance>
+<instance part="C1" gate="G$1" x="35.56" y="86.36" smashed="yes">
+<attribute name="NAME" x="34.544" y="89.281" size="1.778" layer="95" font="vector" align="bottom-right"/>
+<attribute name="VALUE" x="34.544" y="84.201" size="1.778" layer="96" font="vector" align="bottom-right"/>
+</instance>
+<instance part="C2" gate="G$1" x="71.12" y="86.36" smashed="yes">
+<attribute name="NAME" x="72.644" y="89.281" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="72.644" y="84.201" size="1.778" layer="96" font="vector"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -900,6 +944,8 @@ UNUSED</text>
 <wire x1="68.58" y1="91.44" x2="71.12" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="91.44" x2="71.12" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<junction x="71.12" y="91.44"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="1"/>
@@ -924,12 +970,16 @@ UNUSED</text>
 <wire x1="38.1" y1="83.82" x2="35.56" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="83.82" x2="35.56" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<junction x="35.56" y="83.82"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="0V_OUT"/>
 <wire x1="68.58" y1="83.82" x2="71.12" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="83.82" x2="71.12" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<junction x="71.12" y="83.82"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="18"/>
@@ -1065,6 +1115,8 @@ UNUSED</text>
 <wire x1="38.1" y1="91.44" x2="35.56" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="91.44" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="P+3" gate="1" pin="V+"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<junction x="35.56" y="91.44"/>
 </segment>
 </net>
 </nets>
