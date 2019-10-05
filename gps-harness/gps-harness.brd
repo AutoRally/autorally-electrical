@@ -38,7 +38,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -59,15 +59,17 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="30.0763375" y2="0.04571875" width="0" layer="20"/>
-<wire x1="30.0763375" y1="0.04571875" x2="30.127103125" y2="33.078221875" width="0" layer="20"/>
-<wire x1="30.127103125" y1="33.078221875" x2="0" y2="33.01" width="0" layer="20"/>
-<wire x1="0" y1="33.01" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="0" y1="0" x2="29.603896875" y2="-0.033021875" width="0" layer="20"/>
+<wire x1="29.603896875" y1="-0.033021875" x2="29.53020625" y2="33.964684375" width="0" layer="20"/>
+<wire x1="29.53020625" y1="33.964684375" x2="0.078740625" y2="34.033621875" width="0" layer="20"/>
+<wire x1="0.078740625" y1="34.033621875" x2="0" y2="0" width="0" layer="20"/>
 <text x="3.924303125" y="25.425403125" size="0.4064" layer="1">PORTD</text>
 <text x="13.149578125" y="25.430478125" size="0.4064" layer="1">PORTA</text>
 <text x="7.00785625" y="2.1183625" size="0.4064" layer="1" rot="R180">PORTB</text>
 <text x="11.84655625" y="2.37998125" size="0.4064" layer="1">BATTERY</text>
 <text x="23.489921875" y="32.209740625" size="0.4064" layer="1">GPIO</text>
+<hole x="2.753359375" y="32.438340625" drill="1" locked="yes"/>
+<hole x="27.858721875" y="2.047240625" drill="1" locked="yes"/>
 </plain>
 <libraries>
 <library name="pinhead" urn="urn:adsk.eagle:library:325">
@@ -704,6 +706,10 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="8.5" severity="warning">
+Since Version 8.5, EAGLE supports locking for holes, vias, wires and polygons. 
+The locking property on all objects of these types will not be understood in this version. 
 </note>
 </compatibility>
 </eagle>
