@@ -842,12 +842,12 @@
 </class>
 </classes>
 <groups>
-<schematic_group name="PORT_A"/>
-<schematic_group name="PORT_D"/>
-<schematic_group name="GPI/O"/>
-<schematic_group name="PORT_B"/>
-<schematic_group name="BATTERY_POWER"/>
-<schematic_group name="IMU_TSY"/>
+<schematic_group name="PORT_A" titleSize="10"/>
+<schematic_group name="PORT_D" titleSize="10"/>
+<schematic_group name="GPI/O" titleSize="10"/>
+<schematic_group name="PORT_B" titleSize="10"/>
+<schematic_group name="BATTERY_POWER" titleSize="10"/>
+<schematic_group name="IMU_TSY" titleSize="10"/>
 </groups>
 <parts>
 <part name="PORTA" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
@@ -873,17 +873,17 @@
 <instance part="PORTB" gate="A" x="43.18" y="99.06" smashed="yes" rot="R180" grouprefs="PORT_B">
 <attribute name="VALUE" x="49.53" y="106.68" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BATTERY" gate="G$1" x="121.92" y="99.06" smashed="yes" rot="R180" grouprefs="BATTERY_POWER">
-<attribute name="VALUE" x="128.27" y="104.14" size="1.778" layer="96" rot="R180"/>
+<instance part="BATTERY" gate="G$1" x="132.08" y="109.22" smashed="yes" rot="R180" grouprefs="BATTERY_POWER">
+<attribute name="VALUE" x="138.43" y="114.3" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GPIO" gate="G$1" x="223.52" y="170.18" smashed="yes" grouprefs="GPI/O">
 <attribute name="VALUE" x="217.17" y="149.86" size="1.778" layer="96"/>
 </instance>
-<instance part="IMU" gate="G$1" x="210.82" y="96.52" smashed="yes" rot="R270" grouprefs="IMU_TSY">
-<attribute name="VALUE" x="205.74" y="102.87" size="1.778" layer="96" rot="R270"/>
+<instance part="IMU" gate="G$1" x="213.36" y="86.36" smashed="yes" rot="R270" grouprefs="IMU_TSY">
+<attribute name="VALUE" x="208.28" y="92.71" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="TSY" gate="G$1" x="218.44" y="96.52" smashed="yes" rot="R270" grouprefs="IMU_TSY">
-<attribute name="VALUE" x="213.36" y="102.87" size="1.778" layer="96" rot="R270"/>
+<instance part="TSY" gate="G$1" x="220.98" y="86.36" smashed="yes" rot="R270" grouprefs="IMU_TSY">
+<attribute name="VALUE" x="215.9" y="92.71" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
 <instance part="FRAME1" gate="G$2" x="172.72" y="0" smashed="yes">
@@ -918,8 +918,8 @@
 </segment>
 <segment>
 <pinref part="BATTERY" gate="G$1" pin="2"/>
-<wire x1="124.46" y1="99.06" x2="127" y2="99.06" width="0.1524" layer="91" grouprefs="BATTERY_POWER"/>
-<label x="127" y="99.06" size="1.778" layer="95" xref="yes" grouprefs="BATTERY_POWER"/>
+<wire x1="134.62" y1="109.22" x2="137.16" y2="109.22" width="0.1524" layer="91" grouprefs="BATTERY_POWER"/>
+<label x="137.16" y="109.22" size="1.778" layer="95" xref="yes" grouprefs="BATTERY_POWER"/>
 </segment>
 </net>
 <net name="RXA" class="0">
@@ -973,8 +973,8 @@
 <net name="VCC" class="0">
 <segment>
 <pinref part="BATTERY" gate="G$1" pin="1"/>
-<wire x1="124.46" y1="96.52" x2="127" y2="96.52" width="0.1524" layer="91" grouprefs="BATTERY_POWER"/>
-<label x="127" y="96.52" size="1.778" layer="95" xref="yes" grouprefs="BATTERY_POWER"/>
+<wire x1="134.62" y1="106.68" x2="137.16" y2="106.68" width="0.1524" layer="91" grouprefs="BATTERY_POWER"/>
+<label x="137.16" y="106.68" size="1.778" layer="95" xref="yes" grouprefs="BATTERY_POWER"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="2"/>
@@ -1024,13 +1024,13 @@
 </segment>
 <segment>
 <pinref part="IMU" gate="G$1" pin="1"/>
-<wire x1="210.82" y1="99.06" x2="210.82" y2="101.6" width="0.1524" layer="91" grouprefs="IMU_TSY"/>
-<label x="210.82" y="101.6" size="1.778" layer="95" rot="R90" xref="yes" grouprefs="IMU_TSY"/>
+<wire x1="213.36" y1="88.9" x2="213.36" y2="91.44" width="0.1524" layer="91" grouprefs="IMU_TSY"/>
+<label x="213.36" y="91.44" size="1.778" layer="95" rot="R90" xref="yes" grouprefs="IMU_TSY"/>
 </segment>
 <segment>
 <pinref part="TSY" gate="G$1" pin="1"/>
-<wire x1="218.44" y1="99.06" x2="218.44" y2="101.6" width="0.1524" layer="91" grouprefs="IMU_TSY"/>
-<label x="218.44" y="101.6" size="1.778" layer="95" rot="R90" xref="yes" grouprefs="IMU_TSY"/>
+<wire x1="220.98" y1="88.9" x2="220.98" y2="91.44" width="0.1524" layer="91" grouprefs="IMU_TSY"/>
+<label x="220.98" y="91.44" size="1.778" layer="95" rot="R90" xref="yes" grouprefs="IMU_TSY"/>
 </segment>
 </net>
 <net name="N$23" class="0">
