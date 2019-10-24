@@ -777,6 +777,61 @@
 </deviceset>
 </devicesets>
 </library>
+<library name="frames" urn="urn:adsk.eagle:library:229">
+<description>&lt;b&gt;Frames for Sheet and Layout&lt;/b&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="FRAME_A_L" urn="urn:adsk.eagle:symbol:13882/1" library_version="1">
+<frame x1="0" y1="0" x2="279.4" y2="215.9" columns="6" rows="5" layer="94" border-bottom="no"/>
+</symbol>
+<symbol name="DOCFIELD" urn="urn:adsk.eagle:symbol:13864/1" library_version="1">
+<wire x1="0" y1="0" x2="71.12" y2="0" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="15.24" x2="87.63" y2="15.24" width="0.1016" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="0" y1="5.08" x2="71.12" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="0" y1="5.08" x2="0" y2="15.24" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="15.24" x2="101.6" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="71.12" y1="5.08" x2="71.12" y2="0" width="0.1016" layer="94"/>
+<wire x1="71.12" y1="5.08" x2="87.63" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="71.12" y1="0" x2="101.6" y2="0" width="0.1016" layer="94"/>
+<wire x1="87.63" y1="15.24" x2="87.63" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="87.63" y1="15.24" x2="0" y2="15.24" width="0.1016" layer="94"/>
+<wire x1="87.63" y1="5.08" x2="101.6" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="5.08" x2="101.6" y2="0" width="0.1016" layer="94"/>
+<wire x1="0" y1="15.24" x2="0" y2="22.86" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="35.56" x2="0" y2="35.56" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="35.56" x2="101.6" y2="22.86" width="0.1016" layer="94"/>
+<wire x1="0" y1="22.86" x2="101.6" y2="22.86" width="0.1016" layer="94"/>
+<wire x1="0" y1="22.86" x2="0" y2="35.56" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="22.86" x2="101.6" y2="15.24" width="0.1016" layer="94"/>
+<text x="1.27" y="1.27" size="2.54" layer="94">Date:</text>
+<text x="12.7" y="1.27" size="2.54" layer="94">&gt;LAST_DATE_TIME</text>
+<text x="72.39" y="1.27" size="2.54" layer="94">Sheet:</text>
+<text x="86.36" y="1.27" size="2.54" layer="94">&gt;SHEET</text>
+<text x="88.9" y="11.43" size="2.54" layer="94">REV:</text>
+<text x="1.27" y="19.05" size="2.54" layer="94">TITLE:</text>
+<text x="1.27" y="11.43" size="2.54" layer="94">Document Number:</text>
+<text x="17.78" y="19.05" size="2.54" layer="94">&gt;DRAWING_NAME</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FRAME_A_L" urn="urn:adsk.eagle:component:13939/1" prefix="FRAME" uservalue="yes" library_version="1">
+<description>&lt;b&gt;FRAME&lt;/b&gt; A Size , 8 1/2 x 11 INCH, Landscape&lt;p&gt;</description>
+<gates>
+<gate name="G$1" symbol="FRAME_A_L" x="0" y="0" addlevel="always"/>
+<gate name="G$2" symbol="DOCFIELD" x="172.72" y="0" addlevel="always"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -786,6 +841,14 @@
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
+<groups>
+<schematic_group name="PORT_A"/>
+<schematic_group name="PORT_D"/>
+<schematic_group name="GPI/O"/>
+<schematic_group name="PORT_B"/>
+<schematic_group name="BATTERY_POWER"/>
+<schematic_group name="IMU_TSY"/>
+</groups>
 <parts>
 <part name="PORTA" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
 <part name="PORTD" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
@@ -794,39 +857,39 @@
 <part name="GPIO" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X12" device="" package3d_urn="urn:adsk.eagle:package:22487/2"/>
 <part name="IMU" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
 <part name="TSY" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_A_L" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="PORTA" gate="A" x="20.32" y="68.58" smashed="yes" rot="R180">
-<attribute name="NAME" x="16.51" y="75.565" size="1.778" layer="95"/>
-<attribute name="VALUE" x="26.67" y="76.2" size="1.778" layer="96" rot="R180"/>
+<instance part="PORTA" gate="A" x="33.02" y="172.72" smashed="yes" rot="R180" grouprefs="PORT_A">
+<attribute name="VALUE" x="39.37" y="180.34" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="PORTD" gate="A" x="43.18" y="68.58" smashed="yes" rot="R180">
-<attribute name="NAME" x="39.37" y="75.565" size="1.778" layer="95"/>
-<attribute name="VALUE" x="49.53" y="76.2" size="1.778" layer="96" rot="R180"/>
+<instance part="PORTD" gate="A" x="119.38" y="172.72" smashed="yes" rot="R180" grouprefs="PORT_D">
+<attribute name="VALUE" x="125.73" y="180.34" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="PORTB" gate="A" x="17.78" y="53.34" smashed="yes" rot="R180">
-<attribute name="NAME" x="13.97" y="52.705" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="24.13" y="60.96" size="1.778" layer="96" rot="R180"/>
+<instance part="PORTB" gate="A" x="43.18" y="99.06" smashed="yes" rot="R180" grouprefs="PORT_B">
+<attribute name="VALUE" x="49.53" y="106.68" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BATTERY" gate="G$1" x="25.4" y="38.1" smashed="yes" rot="R180">
-<attribute name="NAME" x="19.05" y="42.545" size="1.778" layer="95"/>
-<attribute name="VALUE" x="31.75" y="43.18" size="1.778" layer="96" rot="R180"/>
+<instance part="BATTERY" gate="G$1" x="121.92" y="99.06" smashed="yes" rot="R180" grouprefs="BATTERY_POWER">
+<attribute name="VALUE" x="128.27" y="104.14" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="GPIO" gate="G$1" x="76.2" y="53.34" smashed="yes">
-<attribute name="NAME" x="69.85" y="69.215" size="1.778" layer="95"/>
-<attribute name="VALUE" x="69.85" y="33.02" size="1.778" layer="96"/>
+<instance part="GPIO" gate="G$1" x="223.52" y="170.18" smashed="yes" grouprefs="GPI/O">
+<attribute name="VALUE" x="217.17" y="149.86" size="1.778" layer="96"/>
 </instance>
-<instance part="IMU" gate="G$1" x="45.72" y="38.1" smashed="yes" rot="R270">
-<attribute name="NAME" x="43.815" y="34.29" size="1.778" layer="95"/>
-<attribute name="VALUE" x="40.64" y="44.45" size="1.778" layer="96" rot="R270"/>
+<instance part="IMU" gate="G$1" x="210.82" y="96.52" smashed="yes" rot="R270" grouprefs="IMU_TSY">
+<attribute name="VALUE" x="205.74" y="102.87" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="TSY" gate="G$1" x="53.34" y="38.1" smashed="yes" rot="R270">
-<attribute name="NAME" x="51.435" y="34.29" size="1.778" layer="95"/>
-<attribute name="VALUE" x="48.26" y="44.45" size="1.778" layer="96" rot="R270"/>
+<instance part="TSY" gate="G$1" x="218.44" y="96.52" smashed="yes" rot="R270" grouprefs="IMU_TSY">
+<attribute name="VALUE" x="213.36" y="102.87" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
+<instance part="FRAME1" gate="G$2" x="172.72" y="0" smashed="yes">
+<attribute name="LAST_DATE_TIME" x="185.42" y="1.27" size="2.54" layer="94"/>
+<attribute name="SHEET" x="259.08" y="1.27" size="2.54" layer="94"/>
+<attribute name="DRAWING_NAME" x="190.5" y="19.05" size="2.54" layer="94"/>
 </instance>
 </instances>
 <busses>
@@ -835,151 +898,151 @@
 <net name="GND" class="0">
 <segment>
 <pinref part="PORTB" gate="A" pin="4"/>
-<wire x1="20.32" y1="55.88" x2="22.86" y2="55.88" width="0.1524" layer="91"/>
-<label x="22.86" y="55.88" size="1.778" layer="95" xref="yes"/>
+<wire x1="45.72" y1="101.6" x2="48.26" y2="101.6" width="0.1524" layer="91" grouprefs="PORT_B"/>
+<label x="48.26" y="101.6" size="1.778" layer="95" xref="yes" grouprefs="PORT_B"/>
 </segment>
 <segment>
 <pinref part="PORTA" gate="A" pin="3"/>
-<wire x1="22.86" y1="71.12" x2="25.4" y2="71.12" width="0.1524" layer="91"/>
-<label x="25.4" y="71.12" size="1.778" layer="95" xref="yes"/>
+<wire x1="35.56" y1="175.26" x2="38.1" y2="175.26" width="0.1524" layer="91" grouprefs="PORT_A"/>
+<label x="38.1" y="175.26" size="1.778" layer="95" xref="yes" grouprefs="PORT_A"/>
 </segment>
 <segment>
 <pinref part="PORTD" gate="A" pin="3"/>
-<wire x1="45.72" y1="71.12" x2="48.26" y2="71.12" width="0.1524" layer="91"/>
-<label x="48.26" y="71.12" size="1.778" layer="95" xref="yes"/>
+<wire x1="121.92" y1="175.26" x2="124.46" y2="175.26" width="0.1524" layer="91" grouprefs="PORT_D"/>
+<label x="124.46" y="175.26" size="1.778" layer="95" xref="yes" grouprefs="PORT_D"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="1"/>
-<wire x1="73.66" y1="66.04" x2="71.12" y2="66.04" width="0.1524" layer="91"/>
-<label x="71.12" y="66.04" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="220.98" y1="182.88" x2="218.44" y2="182.88" width="0.1524" layer="91" grouprefs="GPI/O"/>
+<label x="218.44" y="182.88" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 <segment>
 <pinref part="BATTERY" gate="G$1" pin="2"/>
-<wire x1="27.94" y1="38.1" x2="30.48" y2="38.1" width="0.1524" layer="91"/>
-<label x="30.48" y="38.1" size="1.778" layer="95" xref="yes"/>
+<wire x1="124.46" y1="99.06" x2="127" y2="99.06" width="0.1524" layer="91" grouprefs="BATTERY_POWER"/>
+<label x="127" y="99.06" size="1.778" layer="95" xref="yes" grouprefs="BATTERY_POWER"/>
 </segment>
 </net>
 <net name="RXA" class="0">
 <segment>
 <pinref part="PORTA" gate="A" pin="2"/>
-<wire x1="22.86" y1="68.58" x2="25.4" y2="68.58" width="0.1524" layer="91"/>
-<label x="25.4" y="68.58" size="1.778" layer="95" xref="yes"/>
+<wire x1="35.56" y1="172.72" x2="38.1" y2="172.72" width="0.1524" layer="91" grouprefs="PORT_A"/>
+<label x="38.1" y="172.72" size="1.778" layer="95" xref="yes" grouprefs="PORT_A"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="7"/>
-<wire x1="73.66" y1="50.8" x2="71.12" y2="50.8" width="0.1524" layer="91"/>
-<label x="71.12" y="50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="220.98" y1="167.64" x2="218.44" y2="167.64" width="0.1524" layer="91" grouprefs="GPI/O"/>
+<label x="218.44" y="167.64" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="TXA" class="0">
 <segment>
 <pinref part="PORTA" gate="A" pin="1"/>
-<wire x1="22.86" y1="66.04" x2="25.4" y2="66.04" width="0.1524" layer="91"/>
-<label x="25.4" y="66.04" size="1.778" layer="95" xref="yes"/>
+<wire x1="35.56" y1="170.18" x2="38.1" y2="170.18" width="0.1524" layer="91" grouprefs="PORT_A"/>
+<label x="38.1" y="170.18" size="1.778" layer="95" xref="yes" grouprefs="PORT_A"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="6"/>
-<wire x1="73.66" y1="53.34" x2="71.12" y2="53.34" width="0.1524" layer="91"/>
-<label x="71.12" y="53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="220.98" y1="170.18" x2="218.44" y2="170.18" width="0.1524" layer="91" grouprefs="GPI/O"/>
+<label x="218.44" y="170.18" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="RXB" class="0">
 <segment>
 <pinref part="PORTB" gate="A" pin="2"/>
-<wire x1="20.32" y1="50.8" x2="22.86" y2="50.8" width="0.1524" layer="91"/>
-<label x="22.86" y="50.8" size="1.778" layer="95" xref="yes"/>
+<wire x1="45.72" y1="96.52" x2="48.26" y2="96.52" width="0.1524" layer="91" grouprefs="PORT_B"/>
+<label x="48.26" y="96.52" size="1.778" layer="95" xref="yes" grouprefs="PORT_B"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="5"/>
-<wire x1="73.66" y1="55.88" x2="71.12" y2="55.88" width="0.1524" layer="91"/>
-<label x="71.12" y="55.88" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="220.98" y1="172.72" x2="218.44" y2="172.72" width="0.1524" layer="91" grouprefs="GPI/O"/>
+<label x="218.44" y="172.72" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="TXB" class="0">
 <segment>
 <pinref part="PORTB" gate="A" pin="1"/>
-<wire x1="20.32" y1="48.26" x2="22.86" y2="48.26" width="0.1524" layer="91"/>
-<label x="22.86" y="48.26" size="1.778" layer="95" xref="yes"/>
+<wire x1="45.72" y1="93.98" x2="48.26" y2="93.98" width="0.1524" layer="91" grouprefs="PORT_B"/>
+<label x="48.26" y="93.98" size="1.778" layer="95" xref="yes" grouprefs="PORT_B"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="4"/>
-<wire x1="73.66" y1="58.42" x2="71.12" y2="58.42" width="0.1524" layer="91"/>
-<label x="71.12" y="58.42" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="220.98" y1="175.26" x2="218.44" y2="175.26" width="0.1524" layer="91" grouprefs="GPI/O"/>
+<label x="218.44" y="175.26" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="VCC" class="0">
 <segment>
 <pinref part="BATTERY" gate="G$1" pin="1"/>
-<wire x1="27.94" y1="35.56" x2="30.48" y2="35.56" width="0.1524" layer="91"/>
-<label x="30.48" y="35.56" size="1.778" layer="95" xref="yes"/>
+<wire x1="124.46" y1="96.52" x2="127" y2="96.52" width="0.1524" layer="91" grouprefs="BATTERY_POWER"/>
+<label x="127" y="96.52" size="1.778" layer="95" xref="yes" grouprefs="BATTERY_POWER"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="2"/>
-<wire x1="73.66" y1="63.5" x2="71.12" y2="63.5" width="0.1524" layer="91"/>
-<label x="71.12" y="63.5" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="220.98" y1="180.34" x2="218.44" y2="180.34" width="0.1524" layer="91" grouprefs="GPI/O"/>
+<label x="218.44" y="180.34" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="10"/>
-<wire x1="73.66" y1="43.18" x2="71.12" y2="43.18" width="0.1524" layer="91"/>
-<label x="71.12" y="43.18" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="220.98" y1="160.02" x2="218.44" y2="160.02" width="0.1524" layer="91" grouprefs="GPI/O"/>
+<label x="218.44" y="160.02" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="TXD" class="0">
 <segment>
 <pinref part="PORTD" gate="A" pin="1"/>
-<wire x1="45.72" y1="66.04" x2="48.26" y2="66.04" width="0.1524" layer="91"/>
-<label x="48.26" y="66.04" size="1.778" layer="95" xref="yes"/>
+<wire x1="121.92" y1="170.18" x2="124.46" y2="170.18" width="0.1524" layer="91" grouprefs="PORT_D"/>
+<label x="124.46" y="170.18" size="1.778" layer="95" xref="yes" grouprefs="PORT_D"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="9"/>
-<wire x1="73.66" y1="45.72" x2="71.12" y2="45.72" width="0.1524" layer="91"/>
-<label x="71.12" y="45.72" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="220.98" y1="162.56" x2="218.44" y2="162.56" width="0.1524" layer="91" grouprefs="GPI/O"/>
+<label x="218.44" y="162.56" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="RXD" class="0">
 <segment>
 <pinref part="PORTD" gate="A" pin="2"/>
-<wire x1="45.72" y1="68.58" x2="48.26" y2="68.58" width="0.1524" layer="91"/>
-<label x="48.26" y="68.58" size="1.778" layer="95" xref="yes"/>
+<wire x1="121.92" y1="172.72" x2="124.46" y2="172.72" width="0.1524" layer="91" grouprefs="PORT_D"/>
+<label x="124.46" y="172.72" size="1.778" layer="95" xref="yes" grouprefs="PORT_D"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="8"/>
-<wire x1="73.66" y1="48.26" x2="71.12" y2="48.26" width="0.1524" layer="91"/>
-<label x="71.12" y="48.26" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="220.98" y1="165.1" x2="218.44" y2="165.1" width="0.1524" layer="91" grouprefs="GPI/O"/>
+<label x="218.44" y="165.1" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="IMU" class="0">
 <segment>
 <pinref part="GPIO" gate="G$1" pin="3"/>
-<wire x1="73.66" y1="60.96" x2="71.12" y2="60.96" width="0.1524" layer="91"/>
-<label x="71.12" y="60.96" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="220.98" y1="177.8" x2="218.44" y2="177.8" width="0.1524" layer="91" grouprefs="GPI/O"/>
+<label x="218.44" y="177.8" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 <segment>
 <pinref part="PORTB" gate="A" pin="3"/>
-<wire x1="20.32" y1="53.34" x2="22.86" y2="53.34" width="0.1524" layer="91"/>
-<label x="22.86" y="53.34" size="1.778" layer="95" xref="yes"/>
+<wire x1="45.72" y1="99.06" x2="48.26" y2="99.06" width="0.1524" layer="91" grouprefs="PORT_B"/>
+<label x="48.26" y="99.06" size="1.778" layer="95" xref="yes" grouprefs="PORT_B"/>
 </segment>
 <segment>
 <pinref part="IMU" gate="G$1" pin="1"/>
-<wire x1="45.72" y1="40.64" x2="45.72" y2="43.18" width="0.1524" layer="91"/>
-<label x="45.72" y="43.18" size="1.778" layer="95" rot="R90" xref="yes"/>
+<wire x1="210.82" y1="99.06" x2="210.82" y2="101.6" width="0.1524" layer="91" grouprefs="IMU_TSY"/>
+<label x="210.82" y="101.6" size="1.778" layer="95" rot="R90" xref="yes" grouprefs="IMU_TSY"/>
 </segment>
 <segment>
 <pinref part="TSY" gate="G$1" pin="1"/>
-<wire x1="53.34" y1="40.64" x2="53.34" y2="43.18" width="0.1524" layer="91"/>
-<label x="53.34" y="43.18" size="1.778" layer="95" rot="R90" xref="yes"/>
+<wire x1="218.44" y1="99.06" x2="218.44" y2="101.6" width="0.1524" layer="91" grouprefs="IMU_TSY"/>
+<label x="218.44" y="101.6" size="1.778" layer="95" rot="R90" xref="yes" grouprefs="IMU_TSY"/>
 </segment>
 </net>
 <net name="N$23" class="0">
 <segment>
 <pinref part="GPIO" gate="G$1" pin="11"/>
-<wire x1="73.66" y1="40.64" x2="71.12" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="157.48" x2="218.44" y2="157.48" width="0.1524" layer="91" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="N$24" class="0">
 <segment>
 <pinref part="GPIO" gate="G$1" pin="12"/>
-<wire x1="73.66" y1="38.1" x2="71.12" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="154.94" x2="218.44" y2="154.94" width="0.1524" layer="91" grouprefs="GPI/O"/>
 </segment>
 </net>
 </nets>
@@ -1002,6 +1065,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.5" severity="warning">
+Since Version 9.5, EAGLE supports persistent groups with
+schematics, and board files. Those persistent groups
+will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
