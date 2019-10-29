@@ -842,12 +842,10 @@
 </class>
 </classes>
 <groups>
-<schematic_group name="PORT_A" titleSize="10"/>
-<schematic_group name="PORT_D" titleSize="10"/>
 <schematic_group name="GPI/O" titleSize="10"/>
-<schematic_group name="PORT_B" titleSize="10"/>
 <schematic_group name="BATTERY_POWER" titleSize="10"/>
 <schematic_group name="IMU_TSY" titleSize="10"/>
+<schematic_group name="PORT" titleSize="12"/>
 </groups>
 <parts>
 <part name="PORTA" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
@@ -864,17 +862,17 @@
 <plain>
 </plain>
 <instances>
-<instance part="PORTA" gate="A" x="33.02" y="172.72" smashed="yes" rot="R180" grouprefs="PORT_A">
-<attribute name="VALUE" x="39.37" y="180.34" size="1.778" layer="96" rot="R180"/>
+<instance part="PORTA" gate="A" x="40.64" y="177.8" smashed="yes" rot="R180" grouprefs="PORT">
+<attribute name="VALUE" x="46.99" y="185.42" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="PORTD" gate="A" x="119.38" y="172.72" smashed="yes" rot="R180" grouprefs="PORT_D">
-<attribute name="VALUE" x="125.73" y="180.34" size="1.778" layer="96" rot="R180"/>
+<instance part="PORTD" gate="A" x="78.74" y="177.8" smashed="yes" rot="R180" grouprefs="PORT">
+<attribute name="VALUE" x="85.09" y="185.42" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="PORTB" gate="A" x="43.18" y="99.06" smashed="yes" rot="R180" grouprefs="PORT_B">
-<attribute name="VALUE" x="49.53" y="106.68" size="1.778" layer="96" rot="R180"/>
+<instance part="PORTB" gate="A" x="53.34" y="149.86" smashed="yes" rot="R180" grouprefs="PORT">
+<attribute name="VALUE" x="59.69" y="157.48" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BATTERY" gate="G$1" x="132.08" y="109.22" smashed="yes" rot="R180" grouprefs="BATTERY_POWER">
-<attribute name="VALUE" x="138.43" y="114.3" size="1.778" layer="96" rot="R180"/>
+<instance part="BATTERY" gate="G$1" x="142.24" y="106.68" smashed="yes" rot="R180" grouprefs="BATTERY_POWER">
+<attribute name="VALUE" x="148.59" y="111.76" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GPIO" gate="G$1" x="223.52" y="170.18" smashed="yes" grouprefs="GPI/O">
 <attribute name="VALUE" x="217.17" y="149.86" size="1.778" layer="96"/>
@@ -898,129 +896,129 @@
 <net name="GND" class="0">
 <segment>
 <pinref part="PORTB" gate="A" pin="4"/>
-<wire x1="45.72" y1="101.6" x2="48.26" y2="101.6" width="0.1524" layer="91" grouprefs="PORT_B"/>
-<label x="48.26" y="101.6" size="1.778" layer="95" xref="yes" grouprefs="PORT_B"/>
+<wire x1="55.88" y1="152.4" x2="66.04" y2="152.4" width="0.1524" layer="91" grouprefs="PORT"/>
+<label x="66.04" y="152.4" size="1.016" layer="95" xref="yes" grouprefs="PORT"/>
 </segment>
 <segment>
 <pinref part="PORTA" gate="A" pin="3"/>
-<wire x1="35.56" y1="175.26" x2="38.1" y2="175.26" width="0.1524" layer="91" grouprefs="PORT_A"/>
-<label x="38.1" y="175.26" size="1.778" layer="95" xref="yes" grouprefs="PORT_A"/>
+<wire x1="43.18" y1="180.34" x2="48.26" y2="180.34" width="0.1524" layer="91" grouprefs="PORT"/>
+<label x="48.26" y="180.34" size="1.016" layer="95" xref="yes" grouprefs="PORT"/>
 </segment>
 <segment>
 <pinref part="PORTD" gate="A" pin="3"/>
-<wire x1="121.92" y1="175.26" x2="124.46" y2="175.26" width="0.1524" layer="91" grouprefs="PORT_D"/>
-<label x="124.46" y="175.26" size="1.778" layer="95" xref="yes" grouprefs="PORT_D"/>
+<wire x1="81.28" y1="180.34" x2="88.9" y2="180.34" width="0.1524" layer="91" grouprefs="PORT"/>
+<label x="88.9" y="180.34" size="1.016" layer="95" xref="yes" grouprefs="PORT"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="1"/>
 <wire x1="220.98" y1="182.88" x2="218.44" y2="182.88" width="0.1524" layer="91" grouprefs="GPI/O"/>
-<label x="218.44" y="182.88" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
+<label x="218.44" y="182.88" size="1.016" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 <segment>
 <pinref part="BATTERY" gate="G$1" pin="2"/>
-<wire x1="134.62" y1="109.22" x2="137.16" y2="109.22" width="0.1524" layer="91" grouprefs="BATTERY_POWER"/>
-<label x="137.16" y="109.22" size="1.778" layer="95" xref="yes" grouprefs="BATTERY_POWER"/>
+<wire x1="144.78" y1="106.68" x2="147.32" y2="106.68" width="0.1524" layer="91" grouprefs="BATTERY_POWER"/>
+<label x="147.32" y="106.68" size="1.016" layer="95" xref="yes" grouprefs="BATTERY_POWER"/>
 </segment>
 </net>
 <net name="RXA" class="0">
 <segment>
 <pinref part="PORTA" gate="A" pin="2"/>
-<wire x1="35.56" y1="172.72" x2="38.1" y2="172.72" width="0.1524" layer="91" grouprefs="PORT_A"/>
-<label x="38.1" y="172.72" size="1.778" layer="95" xref="yes" grouprefs="PORT_A"/>
+<wire x1="43.18" y1="177.8" x2="48.26" y2="177.8" width="0.1524" layer="91" grouprefs="PORT"/>
+<label x="48.26" y="177.8" size="1.016" layer="95" xref="yes" grouprefs="PORT"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="7"/>
 <wire x1="220.98" y1="167.64" x2="218.44" y2="167.64" width="0.1524" layer="91" grouprefs="GPI/O"/>
-<label x="218.44" y="167.64" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
+<label x="218.44" y="167.64" size="1.016" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="TXA" class="0">
 <segment>
 <pinref part="PORTA" gate="A" pin="1"/>
-<wire x1="35.56" y1="170.18" x2="38.1" y2="170.18" width="0.1524" layer="91" grouprefs="PORT_A"/>
-<label x="38.1" y="170.18" size="1.778" layer="95" xref="yes" grouprefs="PORT_A"/>
+<wire x1="43.18" y1="175.26" x2="48.26" y2="175.26" width="0.1524" layer="91" grouprefs="PORT"/>
+<label x="48.26" y="175.26" size="1.016" layer="95" xref="yes" grouprefs="PORT"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="6"/>
 <wire x1="220.98" y1="170.18" x2="218.44" y2="170.18" width="0.1524" layer="91" grouprefs="GPI/O"/>
-<label x="218.44" y="170.18" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
+<label x="218.44" y="170.18" size="1.016" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="RXB" class="0">
 <segment>
 <pinref part="PORTB" gate="A" pin="2"/>
-<wire x1="45.72" y1="96.52" x2="48.26" y2="96.52" width="0.1524" layer="91" grouprefs="PORT_B"/>
-<label x="48.26" y="96.52" size="1.778" layer="95" xref="yes" grouprefs="PORT_B"/>
+<wire x1="55.88" y1="147.32" x2="66.04" y2="147.32" width="0.1524" layer="91" grouprefs="PORT"/>
+<label x="66.04" y="147.32" size="1.016" layer="95" xref="yes" grouprefs="PORT"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="5"/>
 <wire x1="220.98" y1="172.72" x2="218.44" y2="172.72" width="0.1524" layer="91" grouprefs="GPI/O"/>
-<label x="218.44" y="172.72" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
+<label x="218.44" y="172.72" size="1.016" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="TXB" class="0">
 <segment>
 <pinref part="PORTB" gate="A" pin="1"/>
-<wire x1="45.72" y1="93.98" x2="48.26" y2="93.98" width="0.1524" layer="91" grouprefs="PORT_B"/>
-<label x="48.26" y="93.98" size="1.778" layer="95" xref="yes" grouprefs="PORT_B"/>
+<wire x1="55.88" y1="144.78" x2="66.04" y2="144.78" width="0.1524" layer="91" grouprefs="PORT"/>
+<label x="66.04" y="144.78" size="1.016" layer="95" xref="yes" grouprefs="PORT"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="4"/>
 <wire x1="220.98" y1="175.26" x2="218.44" y2="175.26" width="0.1524" layer="91" grouprefs="GPI/O"/>
-<label x="218.44" y="175.26" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
+<label x="218.44" y="175.26" size="1.016" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="VCC" class="0">
 <segment>
 <pinref part="BATTERY" gate="G$1" pin="1"/>
-<wire x1="134.62" y1="106.68" x2="137.16" y2="106.68" width="0.1524" layer="91" grouprefs="BATTERY_POWER"/>
-<label x="137.16" y="106.68" size="1.778" layer="95" xref="yes" grouprefs="BATTERY_POWER"/>
+<wire x1="144.78" y1="104.14" x2="147.32" y2="104.14" width="0.1524" layer="91" grouprefs="BATTERY_POWER"/>
+<label x="147.32" y="104.14" size="1.016" layer="95" xref="yes" grouprefs="BATTERY_POWER"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="2"/>
 <wire x1="220.98" y1="180.34" x2="218.44" y2="180.34" width="0.1524" layer="91" grouprefs="GPI/O"/>
-<label x="218.44" y="180.34" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
+<label x="218.44" y="180.34" size="1.016" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="10"/>
 <wire x1="220.98" y1="160.02" x2="218.44" y2="160.02" width="0.1524" layer="91" grouprefs="GPI/O"/>
-<label x="218.44" y="160.02" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
+<label x="218.44" y="160.02" size="1.016" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="TXD" class="0">
 <segment>
 <pinref part="PORTD" gate="A" pin="1"/>
-<wire x1="121.92" y1="170.18" x2="124.46" y2="170.18" width="0.1524" layer="91" grouprefs="PORT_D"/>
-<label x="124.46" y="170.18" size="1.778" layer="95" xref="yes" grouprefs="PORT_D"/>
+<wire x1="81.28" y1="175.26" x2="88.9" y2="175.26" width="0.1524" layer="91" grouprefs="PORT"/>
+<label x="88.9" y="175.26" size="1.016" layer="95" xref="yes" grouprefs="PORT"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="9"/>
 <wire x1="220.98" y1="162.56" x2="218.44" y2="162.56" width="0.1524" layer="91" grouprefs="GPI/O"/>
-<label x="218.44" y="162.56" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
+<label x="218.44" y="162.56" size="1.016" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="RXD" class="0">
 <segment>
 <pinref part="PORTD" gate="A" pin="2"/>
-<wire x1="121.92" y1="172.72" x2="124.46" y2="172.72" width="0.1524" layer="91" grouprefs="PORT_D"/>
-<label x="124.46" y="172.72" size="1.778" layer="95" xref="yes" grouprefs="PORT_D"/>
+<wire x1="81.28" y1="177.8" x2="88.9" y2="177.8" width="0.1524" layer="91" grouprefs="PORT"/>
+<label x="88.9" y="177.8" size="1.016" layer="95" xref="yes" grouprefs="PORT"/>
 </segment>
 <segment>
 <pinref part="GPIO" gate="G$1" pin="8"/>
 <wire x1="220.98" y1="165.1" x2="218.44" y2="165.1" width="0.1524" layer="91" grouprefs="GPI/O"/>
-<label x="218.44" y="165.1" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
+<label x="218.44" y="165.1" size="1.016" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 </net>
 <net name="IMU" class="0">
 <segment>
 <pinref part="GPIO" gate="G$1" pin="3"/>
 <wire x1="220.98" y1="177.8" x2="218.44" y2="177.8" width="0.1524" layer="91" grouprefs="GPI/O"/>
-<label x="218.44" y="177.8" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
+<label x="218.44" y="177.8" size="1.016" layer="95" rot="R180" xref="yes" grouprefs="GPI/O"/>
 </segment>
 <segment>
 <pinref part="PORTB" gate="A" pin="3"/>
-<wire x1="45.72" y1="99.06" x2="48.26" y2="99.06" width="0.1524" layer="91" grouprefs="PORT_B"/>
-<label x="48.26" y="99.06" size="1.778" layer="95" xref="yes" grouprefs="PORT_B"/>
+<wire x1="55.88" y1="149.86" x2="66.04" y2="149.86" width="0.1524" layer="91" grouprefs="PORT"/>
+<label x="66.04" y="149.86" size="1.016" layer="95" xref="yes" grouprefs="PORT"/>
 </segment>
 <segment>
 <pinref part="IMU" gate="G$1" pin="1"/>
@@ -1033,16 +1031,16 @@
 <label x="220.98" y="91.44" size="1.778" layer="95" rot="R90" xref="yes" grouprefs="IMU_TSY"/>
 </segment>
 </net>
-<net name="N$23" class="0">
+<net name="NO_CONNECTION" class="0">
 <segment>
 <pinref part="GPIO" gate="G$1" pin="11"/>
 <wire x1="220.98" y1="157.48" x2="218.44" y2="157.48" width="0.1524" layer="91" grouprefs="GPI/O"/>
+<label x="218.44" y="157.48" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
-</net>
-<net name="N$24" class="0">
 <segment>
 <pinref part="GPIO" gate="G$1" pin="12"/>
 <wire x1="220.98" y1="154.94" x2="218.44" y2="154.94" width="0.1524" layer="91" grouprefs="GPI/O"/>
+<label x="218.44" y="154.94" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
