@@ -860,6 +860,9 @@
 <sheets>
 <sheet>
 <plain>
+<text x="40.64" y="185.42" size="1.778" layer="95">PORTA</text>
+<text x="53.34" y="154.94" size="1.778" layer="95">PORTB</text>
+<text x="78.74" y="182.88" size="1.778" layer="95">PORTD</text>
 </plain>
 <instances>
 <instance part="PORTA" gate="A" x="40.64" y="177.8" smashed="yes" rot="R180" grouprefs="PORT">
@@ -1031,12 +1034,14 @@
 <label x="213.36" y="106.68" size="1.778" layer="95" rot="R90" xref="yes" grouprefs="IMU_TSY"/>
 </segment>
 </net>
-<net name="NO_CONNECTION" class="0">
+<net name="NC_1" class="0">
 <segment>
 <pinref part="GPIO" gate="G$1" pin="11"/>
 <wire x1="210.82" y1="154.94" x2="208.28" y2="154.94" width="0.1524" layer="91" grouprefs="GPI/O"/>
 <label x="208.28" y="154.94" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
+</net>
+<net name="NC_2" class="0">
 <segment>
 <pinref part="GPIO" gate="G$1" pin="12"/>
 <wire x1="210.82" y1="152.4" x2="208.28" y2="152.4" width="0.1524" layer="91" grouprefs="GPI/O"/>

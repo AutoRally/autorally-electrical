@@ -70,14 +70,21 @@
 <text x="32.78378125" y="16.870684375" size="2" layer="21" rot="R90">GPIO</text>
 <hole x="2.7432" y="38.1" drill="3.6" locked="yes"/>
 <hole x="33.02" y="2.7432" drill="3.6" locked="yes"/>
-<text x="10.256521875" y="20.124421875" size="2" layer="22">IMU</text>
-<text x="9.751059375" y="25.966421875" size="2" layer="22">TSM</text>
-<hole x="2.032" y="2.7686" drill="3.6" locked="yes"/>
+<text x="10.256521875" y="20.124421875" size="2" layer="21">IMU</text>
+<text x="9.751059375" y="25.966421875" size="2" layer="21">TSM</text>
+<hole x="2.7432" y="2.7686" drill="3.6"/>
 <hole x="33.02" y="38.1" drill="3.6" locked="yes"/>
 <text x="26.512515625" y="2.031996875" locked="yes" size="2" layer="22" rot="MR0">Autorally
 GPS Harness
 v1.0
 Oct. 2019</text>
+<polygon width="0.1524" layer="21">
+<vertex x="1.27" y="34.29"/>
+<vertex x="1.27" y="26.67"/>
+<vertex x="5.08" y="26.67"/>
+<vertex x="5.08" y="34.29"/>
+</polygon>
+<text x="0" y="24.13" size="1.27" layer="21">BOARD#</text>
 </plain>
 <libraries>
 <library name="pinhead" urn="urn:adsk.eagle:library:325">
@@ -576,22 +583,10 @@ design rules under a new name.</description>
 <contactref element="GPIO" pad="1"/>
 <contactref element="BATTERY" pad="2"/>
 <wire x1="7.320278125" y1="14.726921875" x2="7.472675" y2="14.726921875" width="0.5" layer="16"/>
-<wire x1="16.17471875" y1="6.024878125" x2="7.472675" y2="14.726921875" width="0.5" layer="16"/>
-<wire x1="16.17471875" y1="6.024878125" x2="15.758159375" y2="5.920740625" width="0.1524" layer="16"/>
-<wire x1="14.478" y1="33.8328" x2="12.4968" y2="33.8328" width="0.2032" layer="16"/>
-<wire x1="16.3068" y1="35.6616" x2="14.478" y2="33.8328" width="0.2032" layer="16"/>
-<wire x1="19.9644" y1="35.6616" x2="16.3068" y2="35.6616" width="0.2032" layer="16"/>
-<wire x1="21.7932" y1="33.8328" x2="19.9644" y2="35.6616" width="0.2032" layer="16"/>
 <wire x1="12.4968" y1="33.8328" x2="12.3571" y2="33.822640625" width="0.1524" layer="16"/>
 <wire x1="21.7932" y1="33.8328" x2="21.8287625" y2="33.8226375" width="0.1524" layer="16"/>
-<wire x1="21.9456" y1="33.8328" x2="28.6004" y2="33.8328" width="0.2032" layer="16"/>
 <wire x1="28.6004" y1="33.8328" x2="28.7274" y2="33.802315625" width="0.1524" layer="16"/>
 <wire x1="21.9456" y1="33.8328" x2="21.8287625" y2="33.8226375" width="0.1524" layer="16"/>
-<wire x1="7.4676" y1="18.84171875" x2="7.4676" y2="14.7828" width="0.5" layer="1"/>
-<wire x1="12.3444" y1="23.71851875" x2="7.4676" y2="18.84171875" width="0.5" layer="1"/>
-<wire x1="12.3444" y1="33.6804" x2="12.3444" y2="23.71851875" width="0.5" layer="1"/>
-<wire x1="7.4676" y1="14.7828" x2="7.320278125" y2="14.726921875" width="0.1524" layer="1"/>
-<wire x1="12.3444" y1="33.6804" x2="12.3571" y2="33.822640625" width="0.1524" layer="1"/>
 <polygon width="0.1524" layer="16">
 <vertex x="-1.27" y="41.91"/>
 <vertex x="-1.27" y="-1.27"/>
@@ -644,7 +639,7 @@ design rules under a new name.</description>
 <contactref element="GPIO" pad="10"/>
 <wire x1="23.928809375" y1="5.9436" x2="18.4404" y2="5.9436" width="0.5" layer="1"/>
 <wire x1="18.4404" y1="5.9436" x2="18.298159375" y2="5.920740625" width="0.1524" layer="1"/>
-<wire x1="23.928809375" y1="5.9436" x2="28.7274" y2="10.942315625" width="0.1524" layer="1"/>
+<wire x1="23.928809375" y1="5.9436" x2="28.7274" y2="10.942315625" width="0.5" layer="1"/>
 <wire x1="30.863540625" y1="30.563821875" x2="30.165046875" y2="31.262315625" width="0.5" layer="16"/>
 <wire x1="28.7274" y1="31.262315625" x2="30.165046875" y2="31.262315625" width="0.5" layer="16"/>
 <wire x1="30.863540625" y1="12.722140625" x2="30.863540625" y2="30.563821875" width="0.5" layer="16"/>
@@ -671,15 +666,10 @@ design rules under a new name.</description>
 <contactref element="PORTB" pad="3"/>
 <contactref element="IMU" pad="1"/>
 <contactref element="TSY" pad="1"/>
-<wire x1="7.3152" y1="26.5176" x2="7.3152" y2="21.0312" width="0.2032" layer="1"/>
-<wire x1="7.3152" y1="21.0312" x2="7.1882" y2="20.9702375" width="0.1524" layer="1"/>
-<wire x1="7.3152" y1="26.5176" x2="7.254240625" y2="26.6319" width="0.1524" layer="1"/>
 <wire x1="7.3152" y1="12.4968" x2="7.3152" y2="12.192" width="0.1524" layer="1"/>
 <wire x1="5.4864" y1="14.3256" x2="7.3152" y2="12.4968" width="0.2032" layer="1"/>
 <wire x1="5.4864" y1="19.2024" x2="5.4864" y2="14.3256" width="0.2032" layer="1"/>
-<wire x1="7.1628" y1="20.8788" x2="5.4864" y2="19.2024" width="0.2032" layer="1"/>
 <wire x1="7.3152" y1="12.192" x2="7.320278125" y2="12.186921875" width="0.1524" layer="1"/>
-<wire x1="7.1628" y1="20.8788" x2="7.1882" y2="20.9702375" width="0.1524" layer="1"/>
 <wire x1="7.254240625" y1="26.6319" x2="13.30451875" y2="26.6319" width="0.2032" layer="16"/>
 <wire x1="13.30451875" y1="26.6319" x2="13.307059375" y2="26.634440625" width="0.1524" layer="16"/>
 <via x="13.307059375" y="26.634440625" extent="1-16" drill="0.35"/>
@@ -691,11 +681,15 @@ design rules under a new name.</description>
 <wire x1="25.148540625" y1="27.49041875" x2="26.42108125" y2="28.762959375" width="0.1524" layer="16"/>
 <wire x1="26.42108125" y1="28.762959375" x2="28.68675625" y2="28.762959375" width="0.2032" layer="16"/>
 <wire x1="28.68675625" y1="28.762959375" x2="28.7274" y2="28.722315625" width="0.1524" layer="16"/>
+<wire x1="7.254240625" y1="26.6319" x2="7.254240625" y2="20.970240625" width="0.2032" layer="1"/>
+<wire x1="7.254240625" y1="20.970240625" x2="5.4864" y2="19.2024" width="0.2032" layer="1"/>
+<wire x1="7.254240625" y1="26.6319" x2="7.1882" y2="20.9702375" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="NO_CONNECTION">
+<signal name="NC_1">
 <contactref element="GPIO" pad="11"/>
+</signal>
+<signal name="NC_2">
 <contactref element="GPIO" pad="12"/>
-<wire x1="28.7274" y1="5.862315625" x2="28.7274" y2="8.402315625" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
