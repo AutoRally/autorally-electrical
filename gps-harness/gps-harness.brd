@@ -606,7 +606,7 @@ design rules under a new name.</description>
 <contactref element="GPIO" pad="6"/>
 <wire x1="28.7274" y1="21.102315625" x2="28.072084375" y2="21.102315625" width="0.2032" layer="1"/>
 <wire x1="28.072084375" y1="21.102315625" x2="16.916375" y2="32.258025" width="0.2032" layer="1"/>
-<wire x1="16.916375" y1="32.258025" x2="16.7487625" y2="33.8226375" width="0.1524" layer="1"/>
+<wire x1="16.916375" y1="32.258025" x2="16.7487625" y2="33.8226375" width="0.2032" layer="1"/>
 </signal>
 <signal name="RXB">
 <contactref element="PORTB" pad="2"/>
