@@ -16820,11 +16820,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="121.92" y="180.34" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="RX4" class="0">
+<net name="RC_RX4" class="0">
 <segment>
 <pinref part="JP11" gate="A" pin="3"/>
 <wire x1="96.52" y1="177.8" x2="83.82" y2="177.8" width="0.1524" layer="91"/>
 <label x="83.82" y="177.8" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="JP10" gate="A" pin="2"/>
+<wire x1="35.56" y1="170.18" x2="45.72" y2="170.18" width="0.1524" layer="91"/>
+<label x="45.72" y="170.18" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="RELAYOUT" class="0">
