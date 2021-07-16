@@ -1,7 +1,7 @@
-﻿,Item,Power Consumption/ Notes,Price,Quantity,Item Totals,Section Totals,Link
-GPS,,,,,,,
-,DC DC Converter 3.3V 10W,,23.53,1,23.53,,https://www.digikey.com/product-detail/en/cui-inc/PYB10-Q24-S3/102-2852-ND/4289552
-,20 Pos 2mm Connector Header,,8.26,1,8.26,,https://www.digikey.com/product-detail/en/samtec-inc/EHT-110-01-S-D/SAM8557-ND/1106695
-,3 Pos Screw Terminal,,1.84,1,1.84,,https://www.digikey.com/product-detail/en/on-shore-technology-inc/ED700-3/ED1632-ND/33961
-,Resistor 10kOhm 1/4W 5% Axial,,0.1,1,0.1,,https://www.digikey.com/product-detail/en/yageo/CFR-25JB-52-10K/10KQBK-ND/338
-,"12 Position Header Connector 0.100"" (2.54mm) Through Hole Tin",,0.79,1,0.79,,https://www.digikey.com/product-detail/en/sullins-connector-solutions/PPTC062LFBN-RC/S7074-ND/810212
+﻿,Item,Power Consumption/ Notes,Price,Quantity,Item Totals,Section Totals,Link,
+AutoRally GPS v1.1,DC DC Converter 3.3V 10W,,23.53,1,23.53,,https://www.digikey.com/product-detail/en/cui-inc/PYB10-Q24-S3/102-2852-ND/4289552,102-2852-ND
+AutoRally GPS v1.1,20 Pos 2mm Connector Header,,8.26,1,8.26,,https://www.digikey.com/product-detail/en/samtec-inc/EHT-110-01-S-D/SAM8557-ND/1106695,SAM8557-ND
+AutoRally GPS v1.1,3 Pos Screw Terminal,,1.84,1,1.84,,https://www.digikey.com/product-detail/en/on-shore-technology-inc/ED700-3/ED1632-ND/33961,ED1632-ND
+AutoRally GPS v1.1,Resistor 10kOhm 1/4W 5% Axial,,0.1,1,0.1,,https://www.digikey.com/product-detail/en/yageo/CFR-25JB-52-10K/10KQBK-ND/338,10KQBK-ND
+AutoRally GPS v1.1,"12 Position Header Connector 0.100"" (2.54mm) Through Hole Tin",,0.79,1,0.79,,https://www.digikey.com/product-detail/en/sullins-connector-solutions/PPTC062LFBN-RC/S7074-ND/810212,S7074-ND
+AutoRally GPS v1.1,10µF ±10% 50V Ceramic Capacitor X7S Radial,,1.21,2,2.42,,https://www.digikey.com/product-detail/en/murata-electronics/RDEC71H106K3K1H03B/490-14508-ND/4906199,490-14508-ND
